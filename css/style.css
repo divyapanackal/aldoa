@@ -545,6 +545,7 @@ button {
 :root {
   --gray-color: #858d9;
   --blue-color: #0068fd;
+  --blue-dark: #0b6afb;
   --secondary-color: #709d61;
   --black-color:#000;
   --banner-color: #e6f5fa;
@@ -572,6 +573,7 @@ h2,
   color: #000;
   font: 40px "Manrope-Bold";
   margin-bottom: 30px;
+  line-height: 1;
 }
 .txt-secondary {
   color: var(--secondary-color);
@@ -581,12 +583,12 @@ h2,
   outline: none;
   font-family: "Manrope-Bold";
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 6px 20px;
   display: inline-block;
 }
 .btn-primary {
-  background: var(--secondary-color);
+  background: var(--blue-dark);
   color: #fff;
 }
 .btn-secondary,
@@ -731,11 +733,14 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  border-style: solid;
-  border-width: 0 0 2px;
-  background: transparent;
+
+  background: #fff;
   outline: none;
-  padding: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
 }
 .semi-radius {
   border-top-left-radius: 100px;
@@ -743,12 +748,15 @@ textarea {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+.txt-blue {
+  color: var(--blue-color);
+}
 /*................................................
     4. SKELETON
 .................................................*/
 #header {
   padding: 25px 0;
-  position: sticky;
+  position: absolute;
   top: 0;
   width: 100%;
   background: var(--banner-color);
@@ -798,21 +806,50 @@ main {
 .banner .panel-right {
   width: 50%;
 }
+.banner .panel-right img {
+  height: 70vh;
+}
 .banner .container {
   align-items: center;
+  height: inherit;
 }
 .banner .container h2 {
   margin-bottom: 30px;
+  line-height: 1;
+}
+.banner h2 {
+  font-size: 60px;
 }
 .banner .container p {
   margin-bottom: 30px;
+}
+.email-box input[type="text"] {
+  flex: 0 0 50%;
+}
+.email-box input[type="submit"] {
+ margin-left: -12px; 
 }
 .letter-box {
   background: #f1f2ee;
   border-radius: 10px;
   padding: 50px 15px;
 }
-
+.list-style-one  {
+flex-wrap: wrap;
+}
+.list-style-one li {
+    flex: 1 0 33.333%;
+    display: flex;
+    flex-direction: column;
+}
+.list-style-one li i{
+  font-size: 60px;
+}
+.list-style-one li h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+    margin-top: 15px;
+}
 .mail-box {
   border-radius: 10px;
   padding: 10px;
@@ -1016,3 +1053,4 @@ main {
     padding-top: 20px;
   }
 }
+/* divyaqbgit */
