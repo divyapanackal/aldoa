@@ -547,7 +547,7 @@ button {
   --gray-light:#f5f7fb;
   --blue-color: #0068fd;
   --blue-dark: #0b6afb;
-  --secondary-color: #709d61;
+  --secondary-color: #8992a4;
   --black-color:#000;
   --banner-color: #e6f5fa;
   --font-normal: "Manrope";
@@ -599,11 +599,15 @@ h2,
 .btn-primary i {
   margin-left: 20px;
 }
-.btn-secondary,
+.btn-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+/* .btn-secondary,
 .btn-secondary:hover {
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
-}
+} */
 .block {
   margin-top: 100px;
 }
@@ -789,9 +793,6 @@ textarea {
   width: 100%;
   /* background: var(--banner-color); */
 }
-main {
-  margin-bottom: 100px;
-}
 #footer {
   padding-top: 70px;
 }
@@ -828,11 +829,15 @@ main {
 /*Banner*/
 .banner{
   background: var(--banner-color);
-  height: 100vh;
+  min-height: 100vh;
 }
 .banner .panel-left,
 .banner .panel-right {
   width: 50%;
+  padding: 120px 0;
+}
+.banner .panel-right {
+  padding-left: 100px;
 }
 .banner .panel-right img {
   height: 70vh;
@@ -995,10 +1000,13 @@ min-height: 280px;
 }
 .list-style-two li:nth-child(2) {
   background-color: #fe7743;
+  margin-right: -20px;
+
 } 
 .list-style-two li:nth-child(3) {
   background-color: #0069fe;
   margin-top: -94px;
+  margin-left: -20px;
 } 
 .list-style-two li .txt-name {
 
@@ -1116,13 +1124,48 @@ padding-left: 20px;
 /*................................................
     7. FOOTER SECTION
 .................................................*/
+
+#footer .footer-top li:first-child {
+  flex-basis: 50%;
+  flex-shrink: 0;
+}
+#footer .footer-top {
+  padding-bottom: 30px;
+}
 #footer .flex-box > li {
   flex: 0 1 25%;
   padding: 0 20px;
+  font-size: 13px;
 }
 #footer .flex-box > li a {
-  color: #656565;
+  color: var(--gray-color);
+  font-size: 13px;
 }
+#footer .flex-box.footer-top > li:first-child a {
+  color: var(--blue-color);
+  font-family: var(--font-bold);
+  font-size: 32px;
+
+} 
+#footer .flex-box.footer-top > li:first-child span {
+display: block;
+line-height: 20px;
+margin-top: 30px;
+}
+#footer .flex-box.footer-top > li .footer-contact a {
+  color: var(--blue-color);
+  text-decoration: underline;
+}
+#footer .flex-box.footer-top .btn {
+  font-size: 12px;
+}
+
+.copy-txt {
+  display: block;
+  font-size: 12px;
+  padding: 0 20px 50px 20px;
+}
+
 #footer .flex-box > li h4 {
   color: #000;
   font: 20px "Manrope-Bold";
