@@ -1231,7 +1231,11 @@ textarea {
 }
 
 /*Contact page*/
-.contact-form {}
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
 
 .contact-form .form-box {
   display: flex;
@@ -1242,7 +1246,29 @@ textarea {
 .contact-form .form-box textarea {
   height: 75px;
 }
+.contact-form li {
+  display: flex;
 
+}
+.contact-form li label {
+  display: block;
+  color: var(--black-color);
+}
+.contact-form li > div {
+  flex: 1;
+  padding: 10px 20px;
+}
+.contact-form li input[type="text"],
+.contact-form li input[type="email"],
+.contact-form li input[type="tel"],
+.contact-form li textarea {
+  width: 100%;
+  font-family: var(--font-normal);
+}
+.contact-box h2,
+.contact-box p {
+  text-align: center;
+}
 /*................................................
     7. FOOTER SECTION
 .................................................*/
